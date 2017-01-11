@@ -1,0 +1,14 @@
+/usr/local/tomcat/
+
+
+"./mariadb:/var/lib/mysql:rw"
+
+
+docker run  -p 8888:8080 -v V:\WORK_SPACE\PROGRAMING\Docker\apache-tomcat\tomcat:/usr/local/tomcat tomcat8
+
+docker run --name some-mariadb -e MYSQL_ROOT_PASSWORD=admin -d mariadb:tag
+
+docker run -p 3306:3306 -e MYSQL_ROOT_PASSWORD=admin  mariadb
+
+
+docker run  -p 8888:8080 --link berserk_roentgen:db -v V:\WORK_SPACE\PROGRAMING\Docker\apache-tomcat\tomcat:/usr/local/tomcat tomcat8
